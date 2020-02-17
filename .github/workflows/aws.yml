@@ -72,7 +72,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: ramashankar-private-repo
+        ECR_REPOSITORY: ramashankar-private-repo1
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and - my-ecr-repo
@@ -84,16 +84,16 @@ jobs:
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
-      uses: aws-actions/amazon-ecs-render-task-definition@v3
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: sample-app
+        container-name: sample-app1
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
-      uses: aws-actions/amazon-ecs-deploy-task-definition@v3
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: sample-app-service
+        service: sample-app-service1
         cluster: default
         wait-for-service-stability: true
