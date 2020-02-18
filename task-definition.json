@@ -22,7 +22,7 @@
       "memoryReservation": 300,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "71dd43f864d9443ca407e132c4777b73bd2d94e3",
+      "image": "499250712964.dkr.ecr.us-east-2.amazonaws.com/ramashankar-private-repo:71dd43f864d9443ca407e132c4777b73bd2d94e3",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -48,9 +48,15 @@
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:499250712964:task-definition/task-definition:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:499250712964:task-definition/task-definition:5",
   "family": "task-definition",
   "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
     {
       "targetId": null,
       "targetType": null,
@@ -64,7 +70,7 @@
   ],
   "networkMode": null,
   "cpu": null,
-  "revision": 3,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
