@@ -49,7 +49,7 @@
     }
   ],
   "placementConstraints": [],
-  "memory": 512,
+  "memory": "512",
   "taskRoleArn": null,
   "compatibilities": [
     "EC2"
@@ -75,7 +75,7 @@
     "EC2"
   ],
   "networkMode": null,
-  "cpu": 256,
+  "cpu": "256",
   "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
